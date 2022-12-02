@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "GraphQLAndroid"
-include ':app'
+include(":app")
