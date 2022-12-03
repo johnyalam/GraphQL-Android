@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
-
 plugins {
     id ("com.android.application")
     id ("org.jetbrains.kotlin.android")
@@ -31,6 +29,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    sourceSets {
+        getByName("main").java.srcDirs("src/main/kotlin")
     }
 }
 
