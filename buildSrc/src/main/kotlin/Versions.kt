@@ -15,4 +15,5 @@ object Versions {
     const val espressoCore = "3.5.0"
     const val apolloRuntime = "3.7.1"
 
+
 }
