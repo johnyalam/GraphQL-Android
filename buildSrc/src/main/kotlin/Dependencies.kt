@@ -17,8 +17,6 @@ object Deps {
 
     val lifecycleRuntime by lazy { "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleRuntime}" }
 
-
-
     //GraphQL
     val apolloRuntime by lazy { "com.apollographql.apollo3:apollo-runtime:${Versions.apolloRuntime}" }
 
@@ -30,5 +28,8 @@ object Deps {
     val uiTooling by lazy { "androidx.compose.ui:ui-tooling:${Versions.composeVersion}" }
     val uiTestJunit4 by lazy {"androidx.compose.ui:ui-test-junit4:${Versions.composeVersion}"}
     val uiTestManifest by lazy {"androidx.compose.ui:ui-test-manifest:${Versions.composeVersion}"}
+
+    val androidxTestExt by lazy {"androidx.test.ext:junit:${Versions.androidxTestExt}"}
+
 }
 

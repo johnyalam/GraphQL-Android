@@ -9,13 +9,14 @@ object Versions {
     const val versionName = "1.0.0"
     const val jUnit = "4.12"
     const val coreKtx = "1.9.0"
-    const val appcompat = "1.5.1"
+    const val appcompat = "1.4.1"
     const val material = "1.7.0"
     const val constraintLayout ="2.1.4"
     const val espressoCore = "3.5.0"
     const val apolloRuntime = "3.7.1"
-    const val composeVersion = "1.3.1"
+    const val composeVersion = "1.1.1"
     const val material3 = "1.0.0-alpha02"
 
     const val lifecycleRuntime = "2.3.1"
+    const val androidxTestExt = "1.1.4"
 }

@@ -15,6 +15,9 @@ android {
         versionCode = Versions.versionCode
         versionName = Versions.versionName
         testInstrumentationRunner = Versions.testInstrumentationRunner
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildTypes {
@@ -42,25 +45,25 @@ android {
 }
 
 dependencies {
-    implementation ( Deps.coreKtx)
-    implementation ( Deps.appCompact )
-    implementation ( Deps.material)
-    implementation ( Deps.constraintLayout)
-    testImplementation(Deps.junit)
+
+    implementation (Deps.coreKtx)
+    implementation (Deps.lifecycleRuntime)
+    implementation (Deps.activityCompose)
+
+    implementation (Deps.material3)
+    testImplementation (Deps.junit)
+    androidTestImplementation (Deps.androidxTestExt)
     androidTestImplementation (Deps.testEspressoCore)
+
+    implementation (Deps.composeUi)
+    implementation (Deps.uiToolingPreview)
+    androidTestImplementation (Deps.uiTestJunit4)
+    debugImplementation (Deps.uiTooling)
+    debugImplementation (Deps.uiTestManifest)
 
     //GraphQL
     implementation( Deps.apolloRuntime)
 
-    //Compose UI
-    implementation ( Deps.lifecycleRuntime)
-    implementation ( Deps.material3)
-    implementation(Deps.activityCompose)
-    implementation (Deps.composeUi)
-    implementation (Deps.uiToolingPreview)
-    androidTestImplementation (Deps.uiTooling)
-    debugImplementation (Deps.uiTestJunit4)
-    debugImplementation (Deps.uiTestManifest)
 }
 apollo {
     packageName.set(Versions.packageName)
