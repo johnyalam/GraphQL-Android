@@ -5,16 +5,16 @@ plugins {
 }
 
 android {
-    namespace = "com.johnyalam.graphqlandroid"
+    namespace = Versions.namespace
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.johnyalam.graphqlandroid"
-        minSdk = 21
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0.0"
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        applicationId = Versions.applicationId
+        minSdk = Versions.minSdk
+        targetSdk = Versions.targetSdk
+        versionCode = Versions.versionCode
+        versionName = Versions.versionName
+        testInstrumentationRunner = Versions.testInstrumentationRunner
     }
 
     buildTypes {
@@ -36,16 +36,16 @@ android {
 }
 
 dependencies {
-    implementation ("androidx.core:core-ktx:1.9.0")
-    implementation ("androidx.appcompat:appcompat:1.5.1")
-    implementation ("com.google.android.material:material:1.7.0")
-    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation ("junit:junit:4.13.2")
-    androidTestImplementation ("androidx.test.ext:junit:1.1.4")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.0")
+    implementation ( Deps.coreKtx)
+    implementation ( Deps.appCompact )
+    implementation ( Deps.material)
+    implementation ( Deps.constraintLayout)
+    testImplementation(Deps.junit)
+    androidTestImplementation (Deps.expressoCore)
 
     //GraphQL
-    implementation("com.apollographql.apollo3:apollo-runtime:3.7.1")
+    implementation( Deps.apolloRuntime)
+
 }
 apollo {
     packageName.set("com.johnyalam.graphqlandroid")
