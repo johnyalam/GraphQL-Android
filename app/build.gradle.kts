@@ -5,16 +5,19 @@ plugins {
 }
 
 android {
-    namespace = "com.johnyalam.graphqlandroid"
+    namespace = Versions.namespace
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.johnyalam.graphqlandroid"
-        minSdk = 21
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0.0"
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        applicationId = Versions.applicationId
+        minSdk = Versions.minSdk
+        targetSdk = Versions.targetSdk
+        versionCode = Versions.versionCode
+        versionName = Versions.versionName
+        testInstrumentationRunner = Versions.testInstrumentationRunner
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildTypes {
@@ -37,25 +40,30 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
+        kotlinCompilerExtensionVersion = "1.3.1"
     }
 }
 
 dependencies {
-    implementation ("androidx.core:core-ktx:1.9.0")
-    implementation ("androidx.appcompat:appcompat:1.5.1")
-    implementation ("com.google.android.material:material:1.7.0")
-    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation ("junit:junit:4.13.2")
-    androidTestImplementation ("androidx.test.ext:junit:1.1.4")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.0")
+
+    implementation (Deps.coreKtx)
+    implementation (Deps.lifecycleRuntime)
+    implementation (Deps.activityCompose)
+
+    implementation (Deps.material3)
+    testImplementation (Deps.junit)
+    androidTestImplementation (Deps.androidxTestExt)
+    androidTestImplementation (Deps.testEspressoCore)
+
+    implementation (Deps.composeUi)
+    implementation (Deps.uiToolingPreview)
+    androidTestImplementation (Deps.uiTestJunit4)
+    debugImplementation (Deps.uiTooling)
+    debugImplementation (Deps.uiTestManifest)
 
     //GraphQL
-    implementation("com.apollographql.apollo3:apollo-runtime:3.7.1")
-
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    implementation( Deps.apolloRuntime)
 }
 apollo {
-    packageName.set("com.johnyalam.graphqlandroid")
+    packageName.set(Versions.packageName)
 }
