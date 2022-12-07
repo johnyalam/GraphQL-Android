@@ -33,6 +33,12 @@ android {
     sourceSets {
         getByName("main").java.srcDirs("src/main/kotlin")
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.3.2"
+    }
 }
 
 dependencies {
@@ -46,6 +52,9 @@ dependencies {
 
     //GraphQL
     implementation("com.apollographql.apollo3:apollo-runtime:3.7.1")
+
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
 }
 apollo {
     packageName.set("com.johnyalam.graphqlandroid")
