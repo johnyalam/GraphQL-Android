@@ -63,7 +63,6 @@ dependencies {
 
     //GraphQL
     implementation( Deps.apolloRuntime)
-
 }
 apollo {
     packageName.set(Versions.packageName)
