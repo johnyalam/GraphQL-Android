@@ -1,4 +1,4 @@
-package com.johnyalam.graphqlandroid.ui
+package com.johnyalam.graphqlandroid.presentation.ui.theme
 
 
 import androidx.compose.ui.graphics.Color

@@ -63,7 +63,19 @@ dependencies {
 
     //GraphQL
     implementation( Deps.apolloRuntime)
+
+    //Jetpack Data Store
+    implementation (Deps.datastorePreferences)
+
+    //Security Crypto
+    implementation(Deps.securityCrypto)
+
+    // Compose dependencies
+    implementation (Deps.lifecycle_viewmodel_compose )
+    implementation (Deps.navigation_compose )
+    implementation (Deps.accompanist_flowlayout )
 }
 apollo {
     packageName.set(Versions.packageName)
 }
+
