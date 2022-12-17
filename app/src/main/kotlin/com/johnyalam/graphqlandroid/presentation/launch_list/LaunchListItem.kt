@@ -34,6 +34,7 @@ fun LaunchListItem(item : Int, onItemClick: (Int)-> Unit) {
                 .size(100.dp)
                 .padding(all = 8.dp)
                 .clip(CircleShape)
+
         )
         Spacer(modifier = Modifier.width(8.dp))
         Column(modifier = Modifier
